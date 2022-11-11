@@ -136,5 +136,6 @@ console.log("append", resultsAppend4.preciseWords); //5.042 μs
 
 
 
-// The doublerAppend function scales better than the doublerInsert function. You can tell because the append function has smaller changes in time when the array gets bigger. The insert function runtime increases a lot when each array gets larger. 
+// The doublerAppend function scales better than the doublerInsert function. You can tell because the append function has smaller changes in time when the array gets bigger. The insert function runtime increases by a lot when each array gets larger. 
 // The doublerInsert function is slower because it inserts a new value at the beginning of the array and pushes each value over until it reaches the end. Whereas the doublerAppend function inserts a new value at the end of the array without having to push values over. This makes it faster than the insert function.
+
