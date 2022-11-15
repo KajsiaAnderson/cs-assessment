@@ -4,7 +4,7 @@
 function addToZero(arr) {
     let count = 0
     for(let i = 0; i < arr.length; i++){
-        for(let k = 0; k < arr.length; k++){
+        for(let k = i+1; k < arr.length; k++){
             if(arr[i] + arr[k] === 0){
                 count++
             }
@@ -19,7 +19,7 @@ function addToZero(arr) {
 
 
 console.log(addToZero([])) // -> False
-console.log(addToZero([1])) // -> False
+console.log(addToZero([0])) // -> False
 console.log(addToZero([1, 2, 3])) // -> False
 console.log(addToZero([1, 2, 3, -2])) // -> True
 
@@ -66,15 +66,13 @@ console.log('-----------------------')
 // Write a function, find_longest_word, that takes a list of words and returns the length of the longest one.
 
 function findLongestWordLength(arr) {
-    let str = arr.toString()
-    str=str.split(",");
-    let longest = str[0];
-    for(let i =1 ; i<str.length; i++){
-      if(str[i].length >longest.length){
-        longest = str[i]
+    let longest = 0;
+    for(let i =1 ; i<arr.length; i++){
+      if(arr[i].length >longest){
+        longest = arr[i].length
       }
     }
-    return longest.length;
+    return longest;
   }
 
 console.log(findLongestWordLength(["hi", "hello"]))// -> 5
